@@ -10,6 +10,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+const authRouter = require('./routes/auth');
+app.use('/auth',authRouter);
+
 //connect to mongodb
 //Note:we'll use alocaldatabase for now,and a render-managed one later
 
