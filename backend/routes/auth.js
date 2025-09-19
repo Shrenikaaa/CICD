@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../models/user.model');
+const User = require('../models/user.models');
 
 router.route('/signup').post(async (req, res) => {
   const { username, password } = req.body;
@@ -24,4 +24,5 @@ router.route('/login').post(async (req, res) => {
   }
   res.status(200).json('Login successful!');
 });
+
 module.exports = router;
